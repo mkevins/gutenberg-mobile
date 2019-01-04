@@ -21,6 +21,7 @@ import TextInputState from 'react-native/lib/TextInputState';
 
 type PropsType = BlockType & {
 	isSelected: boolean,
+	clientId: string,
 	showTitle: boolean,
 	onChange: ( clientId: string, attributes: mixed ) => void,
 	onReplace: ( blocks: Array<Object> ) => void,
@@ -66,6 +67,7 @@ export class BlockHolder extends React.Component<PropsType, StateType> {
 			<BlockEdit
 				name={ this.props.name }
 				isSelected={ this.props.isSelected }
+				clientId={ this.props.clientId }
 				attributes={ { ...this.props.attributes } }
 				// pass a curried version of onChanged with just one argument
 				setAttributes={ ( attrs ) =>
@@ -124,6 +126,7 @@ export default compose( [
 
 		return {
 			isSelected,
+			clientId,
 		};
 	} ),
 	withDispatch( ( dispatch, { clientId } ) => {
