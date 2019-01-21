@@ -1,3 +1,7 @@
+before_install:
+   - git clean -fdX
+   - git checkout --force $VERSION
+   - git submodule update --init --recursive
 install:
    - echo "Changing into the android folder of the Bridge module"
    - pushd react-native-gutenberg-bridge/android && ./gradlew --stacktrace clean -Pgroup=com.github.wordpress-mobile.gutenberg-mobile -Pversion=$VERSION install && popd
