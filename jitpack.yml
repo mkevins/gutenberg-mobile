@@ -1,4 +1,5 @@
 before_install:
+   - cat gutenberg/.git
    - git status
    - git submodule
    - ls -la
