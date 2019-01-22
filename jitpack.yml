@@ -3,6 +3,7 @@ before_install:
    - ls -la react-native-aztec
    - ls -la packages/react-native-aztec
    - rm -Rf react-native-aztec
+   - ls -la
    - yes | $ANDROID_HOME/tools/bin/sdkmanager "platforms;android-27"
    - yes | $ANDROID_HOME/tools/bin/sdkmanager "build-tools;27.0.3"
 install:
