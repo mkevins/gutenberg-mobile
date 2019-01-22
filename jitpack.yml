@@ -1,4 +1,5 @@
 before_install:
+   - pwd
    - cat gutenberg/.git
    - git status
    - git submodule
