@@ -1,4 +1,6 @@
 before_install:
+   - echo "gitdir: `pwd`/.git/modules/gutenberg" > gutenberg/.git
+   - echo "gitdir: `pwd`/.git/modules/react-native-aztec" > react-native-aztec/.git
    - pwd
    - cat gutenberg/.git
    - git status
