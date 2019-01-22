@@ -1,6 +1,7 @@
 before_install:
-   - echo "gitdir: /home/jitpack/build/.git/modules/gutenberg" | dd of=./gutenberg/.git
-   - echo "gitdir: /home/jitpack/build/.git/modules/react-native-aztec" | dd of=./react-native-aztec/.git
+   - rm -f ./gutenberg/.git
+   - rm -f ./react-native-aztec/.git
+   - git submodule update --init --recursive
    - pwd
    - cat gutenberg/.git
    - git status
